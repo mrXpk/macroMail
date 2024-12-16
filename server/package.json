@@ -1,0 +1,30 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "TempMail backend server",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-rate-limit": "^7.1.5",
+    "googleapis": "^144.0.0",
+    "helmet": "^7.1.0",
+    "imapflow": "^1.0.171",
+    "mailparser": "^3.7.2",
+    "mongoose": "^8.0.3",
+    "node-imap": "^0.9.6",
+    "nodemailer": "^6.9.7",
+    "redis": "^4.6.11",
+    "twilio": "^5.3.7",
+    "winston": "^3.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}

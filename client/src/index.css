@@ -1,0 +1,92 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+}
+
+/* Container */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Navigation */
+.nav {
+  margin-bottom: 20px;
+}
+
+.nav-content {
+  padding: 1rem 0;
+}
+
+.nav a {
+  color: blue;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+/* Main content */
+.main-content {
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.description {
+  margin-bottom: 1.5rem;
+}
+
+/* Button */
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+button:hover {
+  background-color: #1d4ed8;
+}
+
+button:disabled {
+  background-color: #ccc;
+}
+
+/* Email display */
+.email-display {
+  background-color: #f8f9fa;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+}
+
+/* Features */
+.feature {
+  margin-bottom: 30px;
+}
+
+.feature h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 20px;
+}
