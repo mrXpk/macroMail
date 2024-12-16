@@ -1,7 +1,7 @@
 import { Box, Container, Grid, IconButton, Typography, useTheme } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Facebook, LinkedIn, Email, Phone } from '@mui/icons-material';
+import { Facebook, LinkedIn, Email, Phone, GitHub } from '@mui/icons-material';
 import XIcon from './icons/XIcon';
 
 const MotionIconButton = motion(IconButton);
@@ -22,6 +22,7 @@ export default function Footer() {
     { icon: Facebook, href: 'https://www.facebook.com/profile.php?id=100090131172400', label: 'Facebook' },
     { icon: XIcon, href: 'https://x.com/PratapMukhiya5', label: 'X (formerly Twitter)' },
     { icon: LinkedIn, href: 'https://www.linkedin.com/in/pratap-mukhiya-655a7325a/', label: 'LinkedIn' },
+    { icon: GitHub, href: 'https://github.com/mrXpk', label: 'GitHub' }
   ];
 
   const handleNavigation = (href) => {
