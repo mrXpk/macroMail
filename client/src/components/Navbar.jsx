@@ -10,6 +10,18 @@ export default function Navbar() {
   const { toggleColorMode } = useThemeMode();
   const navigate = useNavigate();
 
+  const pages = [
+    { name: 'Home', path: '/' },
+    { name: 'Inbox', path: '/inbox' },
+    { name: 'Phone', path: '/phone' },
+    { name: 'About', path: '/about' },
+    { name: 'Services', path: '/services' },
+    { name: 'FAQ', path: '/faq' },
+    { name: 'Contact', path: '/contact' },
+    { name: 'Premium', path: '/premium' },
+    { name: 'Visitors', path: '/visitors' }
+  ];
+
   return (
     <AppBar position="fixed">
       <Toolbar>

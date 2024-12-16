@@ -14,6 +14,8 @@ import FAQ from './pages/FAQ';
 import Inbox from './pages/Inbox';
 import Premium from './pages/Premium';
 import Phone from './pages/Phone';
+import Visitors from './pages/Visitors';
+import VisitorDialog from './components/VisitorDialog';
 import ParticlesBackground from './components/ParticlesBackground';
 
 export default function App() {
@@ -36,6 +38,7 @@ export default function App() {
             >
               <ParticlesBackground />
               <Navbar />
+              <VisitorDialog />
               <Box
                 component="main"
                 sx={{
@@ -65,6 +68,7 @@ export default function App() {
                     <Route path="/faq" element={<FAQ />} />
                     <Route path="/premium" element={<Premium />} />
                     <Route path="/phone" element={<Phone />} />
+                    <Route path="/visitors" element={<Visitors />} />
                     <Route path="*" element={<Navigate to="/" replace />} />
                   </Routes>
                 </Container>
