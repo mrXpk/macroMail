@@ -495,3 +495,37 @@
 {"level":"info","message":"Retrieved emails for: temp.w4g38rs4@macromail.com.np","timestamp":"2024-12-16T15:46:01.882Z"}
 {"level":"info","message":"Retrieved emails for: temp.w4g38rs4@macromail.com.np","timestamp":"2024-12-16T15:47:01.898Z"}
 {"level":"info","message":"Retrieved emails for: temp.w4g38rs4@macromail.com.np","timestamp":"2024-12-16T15:48:01.863Z"}
+{"level":"info","message":"Retrieved emails for: temp.w4g38rs4@macromail.com.np","timestamp":"2024-12-16T15:49:01.867Z"}
+{"level":"info","message":"Retrieved emails for: temp.w4g38rs4@macromail.com.np","timestamp":"2024-12-16T15:50:01.873Z"}
+{"level":"info","message":"Retrieved emails for: temp.w4g38rs4@macromail.com.np","timestamp":"2024-12-16T15:51:01.893Z"}
+{"level":"info","message":"Retrieved emails for: temp.w4g38rs4@macromail.com.np","timestamp":"2024-12-16T15:52:01.954Z"}
+{"level":"info","message":"Retrieved emails for: temp.w4g38rs4@macromail.com.np","timestamp":"2024-12-16T15:53:01.960Z"}
+{"level":"info","message":"Retrieved emails for: temp.w4g38rs4@macromail.com.np","timestamp":"2024-12-16T15:54:01.850Z"}
+{"level":"info","message":"Retrieved emails for: temp.w4g38rs4@macromail.com.np","timestamp":"2024-12-16T15:54:52.997Z"}
+{"level":"info","message":"Generated email: temp.6bb5rbkq@macromail.com.np","timestamp":"2024-12-16T15:55:09.061Z"}
+{"level":"info","message":{"address":"64.233.170.109","algo":"TLS_AES_256_GCM_SHA384","authorized":true,"cid":"sea9k2lc7toqt2il5rsg","host":"imap.gmail.com","localAddress":"192.168.254.4","localPort":50625,"msg":"Established secure TCP connection","port":993,"secure":true,"servername":"imap.gmail.com","src":"connection","version":"TLSv1.3"},"timestamp":"2024-12-16T16:10:41.170Z"}
+{"code":"ClosedAfterConnectTLS","level":"error","message":"Error connecting to Gmail: Unexpected close","stack":"Error: Unexpected close\n    at ImapFlow.close (x:\\Desktop\\Cursor Projects(Latest)\\temp-mail\\node_modules\\imapflow\\lib\\imap-flow.js:1499:23)\n    at module.exports (x:\\Desktop\\Cursor Projects(Latest)\\temp-mail\\node_modules\\imapflow\\lib\\commands\\logout.js:12:20)\n    at ImapFlow.run (x:\\Desktop\\Cursor Projects(Latest)\\temp-mail\\node_modules\\imapflow\\lib\\imap-flow.js:2929:28)\n    at ImapFlow.logout (x:\\Desktop\\Cursor Projects(Latest)\\temp-mail\\node_modules\\imapflow\\lib\\imap-flow.js:1473:27)\n    at ImapFlow.startSession (x:\\Desktop\\Cursor Projects(Latest)\\temp-mail\\node_modules\\imapflow\\lib\\imap-flow.js:734:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2024-12-16T16:10:42.896Z"}
+{"level":"info","message":"Retrieved emails for: temp.6bb5rbkq@macromail.com.np","timestamp":"2024-12-16T16:14:27.132Z"}
+{"level":"info","message":"Retrieved emails for: temp.6bb5rbkq@macromail.com.np","timestamp":"2024-12-16T16:14:27.157Z"}
+{"level":"info","message":"Generated email: temp.w2h6k5vs@macromail.com.np","timestamp":"2024-12-16T16:14:40.897Z"}
+{"level":"info","message":"Generated new email: temp.w2h6k5vs@macromail.com.np","timestamp":"2024-12-16T16:14:40.897Z"}
+{"level":"info","message":"Retrieved emails for: temp.w2h6k5vs@macromail.com.np","timestamp":"2024-12-16T16:14:40.968Z"}
+{"level":"info","message":"Generated email: temp.oo7mrbbh@macromail.com.np","timestamp":"2024-12-16T16:14:44.081Z"}
+{"level":"info","message":"Generated new email: temp.oo7mrbbh@macromail.com.np","timestamp":"2024-12-16T16:14:44.082Z"}
+{"level":"info","message":"Retrieved emails for: temp.oo7mrbbh@macromail.com.np","timestamp":"2024-12-16T16:14:44.180Z"}
+{"level":"info","message":"Retrieved emails for: temp.oo7mrbbh@macromail.com.np","timestamp":"2024-12-16T16:15:14.853Z"}
+{"level":"info","message":"Retrieved emails for: temp.oo7mrbbh@macromail.com.np","timestamp":"2024-12-16T16:15:44.858Z"}
+{"level":"info","message":"Retrieved emails for: temp.oo7mrbbh@macromail.com.np","timestamp":"2024-12-16T16:16:14.854Z"}
+{"level":"info","message":"Retrieved emails for: temp.oo7mrbbh@macromail.com.np","timestamp":"2024-12-16T16:16:44.858Z"}
+{"level":"info","message":"Retrieved emails for: temp.oo7mrbbh@macromail.com.np","timestamp":"2024-12-16T16:17:14.851Z"}
+{"level":"info","message":"Retrieved emails for: temp.oo7mrbbh@macromail.com.np","timestamp":"2024-12-16T16:17:44.844Z"}
+{"level":"info","message":"Retrieved emails for: temp.oo7mrbbh@macromail.com.np","timestamp":"2024-12-16T16:19:01.871Z"}
+{"level":"info","message":"Retrieved emails for: temp.oo7mrbbh@macromail.com.np","timestamp":"2024-12-16T16:20:01.860Z"}
+{"level":"info","message":"Retrieved emails for: temp.oo7mrbbh@macromail.com.np","timestamp":"2024-12-16T16:21:01.945Z"}
+{"level":"info","message":"Retrieved emails for: temp.oo7mrbbh@macromail.com.np","timestamp":"2024-12-16T16:22:01.867Z"}
+{"level":"info","message":"Retrieved emails for: temp.oo7mrbbh@macromail.com.np","timestamp":"2024-12-16T16:22:17.604Z"}
+{"level":"info","message":"Retrieved emails for: temp.oo7mrbbh@macromail.com.np","timestamp":"2024-12-16T16:22:44.863Z"}
+{"level":"info","message":"Retrieved emails for: temp.oo7mrbbh@macromail.com.np","timestamp":"2024-12-16T16:23:14.859Z"}
+{"level":"info","message":"Retrieved emails for: temp.oo7mrbbh@macromail.com.np","timestamp":"2024-12-16T16:24:01.857Z"}
+{"level":"info","message":"Retrieved emails for: temp.oo7mrbbh@macromail.com.np","timestamp":"2024-12-16T16:25:01.846Z"}
+{"level":"info","message":"Retrieved emails for: temp.oo7mrbbh@macromail.com.np","timestamp":"2024-12-16T16:26:01.846Z"}
