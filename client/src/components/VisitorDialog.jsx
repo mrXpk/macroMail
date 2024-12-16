@@ -8,10 +8,9 @@ import {
   Typography,
   Box,
   useTheme,
-  Fade,
   Slide
 } from '@mui/material';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const VisitorDialog = () => {
   const [open, setOpen] = useState(false);
@@ -23,9 +22,13 @@ const VisitorDialog = () => {
     // Check if user has visited before
     const hasVisited = localStorage.getItem('visitorName');
     if (!hasVisited) {
-      setOpen(true);
+      setTimeout(() => setOpen(true), 500);
     }
   }, []);
+
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   const handleSubmit = async () => {
     if (name.trim() && !isSubmitting) {
@@ -43,8 +46,7 @@ const VisitorDialog = () => {
         if (response.ok) {
           // Save to localStorage to prevent showing dialog again
           localStorage.setItem('visitorName', name.trim());
-          // Animate out
-          setOpen(false);
+          handleClose();
         }
       } catch (error) {
         console.error('Error saving visitor:', error);
@@ -55,81 +57,74 @@ const VisitorDialog = () => {
   };
 
   return (
-    <AnimatePresence>
-      {open && (
-        <Dialog
-          open={open}
-          TransitionComponent={Slide}
-          TransitionProps={{
-            direction: "up",
-            timeout: {
-              enter: 500,
-              exit: 500
-            }
-          }}
-          PaperProps={{
-            sx: {
-              background: theme.palette.mode === 'dark' ? 'rgba(15, 23, 42, 0.8)' : 'rgba(255, 255, 255, 0.8)',
-              backdropFilter: 'blur(10px)',
-              borderRadius: 2,
-              border: '1px solid',
-              borderColor: theme.palette.mode === 'dark' ? 'rgba(99, 102, 241, 0.2)' : 'rgba(79, 70, 229, 0.2)',
-            }
+    <Dialog
+      open={open}
+      onClose={handleClose}
+      TransitionComponent={Slide}
+      TransitionProps={{
+        direction: "up",
+        timeout: {
+          enter: 500,
+          exit: 300
+        }
+      }}
+      PaperProps={{
+        sx: {
+          background: theme.palette.mode === 'dark' ? 'rgba(15, 23, 42, 0.8)' : 'rgba(255, 255, 255, 0.8)',
+          backdropFilter: 'blur(10px)',
+          borderRadius: 2,
+          border: '1px solid',
+          borderColor: theme.palette.mode === 'dark' ? 'rgba(99, 102, 241, 0.2)' : 'rgba(79, 70, 229, 0.2)',
+        }
+      }}
+    >
+      <DialogTitle>
+        <Typography 
+          variant="h5" 
+          sx={{ 
+            fontFamily: '"Share Tech Mono", monospace',
+            color: theme.palette.primary.main 
           }}
         >
-          <Fade in={open} timeout={500}>
-            <div>
-              <DialogTitle>
-                <Typography 
-                  variant="h5" 
-                  sx={{ 
-                    fontFamily: '"Share Tech Mono", monospace',
-                    color: theme.palette.primary.main 
-                  }}
-                >
-                  Bro, what's ur Name? 🤝
-                </Typography>
-              </DialogTitle>
-              <DialogContent>
-                <Box sx={{ p: 2 }}>
-                  <TextField
-                    fullWidth
-                    variant="outlined"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    placeholder="Type your name here..."
-                    onKeyPress={(e) => e.key === 'Enter' && handleSubmit()}
-                    sx={{
-                      mb: 2,
-                      '& .MuiOutlinedInput-root': {
-                        '& fieldset': {
-                          borderColor: theme.palette.mode === 'dark' ? 'rgba(99, 102, 241, 0.2)' : 'rgba(79, 70, 229, 0.2)',
-                        },
-                      },
-                    }}
-                  />
-                  <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-                    <Button
-                      fullWidth
-                      variant="contained"
-                      onClick={handleSubmit}
-                      disabled={isSubmitting}
-                      sx={{
-                        fontFamily: '"Share Tech Mono", monospace',
-                        textTransform: 'none',
-                        fontSize: '1.1rem'
-                      }}
-                    >
-                      {isSubmitting ? 'Saving... 🚀' : 'Let\'s Go! 🚀'}
-                    </Button>
-                  </motion.div>
-                </Box>
-              </DialogContent>
-            </div>
-          </Fade>
-        </Dialog>
-      )}
-    </AnimatePresence>
+          Bro, what's ur Name? 🤝
+        </Typography>
+      </DialogTitle>
+      <DialogContent>
+        <Box sx={{ p: 2 }}>
+          <TextField
+            fullWidth
+            variant="outlined"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            placeholder="Type your name here..."
+            onKeyPress={(e) => e.key === 'Enter' && handleSubmit()}
+            sx={{
+              mb: 2,
+              '& .MuiOutlinedInput-root': {
+                '& fieldset': {
+                  borderColor: theme.palette.mode === 'dark' ? 'rgba(99, 102, 241, 0.2)' : 'rgba(79, 70, 229, 0.2)',
+                },
+              },
+            }}
+          />
+          <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+            <Button
+              fullWidth
+              variant="contained"
+              onClick={handleSubmit}
+              disabled={isSubmitting}
+              sx={{
+                fontFamily: '"Share Tech Mono", monospace',
+                textTransform: 'none',
+                fontSize: '1.1rem'
+              }}
+            >
+              {isSubmitting ? 'Saving... 🚀' : 'Let\'s Go! 🚀'}
+            </Button>
+          </motion.div>
+        </Box>
+      </DialogContent>
+    </Dialog>
   );
 };
 
