@@ -6,8 +6,6 @@ import rateLimit from 'express-rate-limit';
 import { createLogger, format, transports } from 'winston';
 import mongoose from 'mongoose';
 import emailRoutes from './routes/email.js';
-import phoneRoutes from './routes/phone.js';
-import visitorRoutes from './routes/visitors.js';
 
 dotenv.config();
 
@@ -46,8 +44,6 @@ app.use(limiter);
 
 // Routes
 app.use('/api/email', emailRoutes);
-app.use('/api/phone', phoneRoutes);
-app.use('/api/visitors', visitorRoutes);
 
 // Error handling middleware
 app.use((err, req, res, next) => {

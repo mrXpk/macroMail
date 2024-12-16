@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Facebook, LinkedIn, Email, Phone, GitHub } from '@mui/icons-material';
 import XIcon from './icons/XIcon';
+import VisitorForm from './VisitorForm';
 
 const MotionIconButton = motion(IconButton);
 
@@ -40,140 +41,62 @@ export default function Footer() {
         width: '100%',
         position: 'relative',
         zIndex: 10,
-        backgroundColor: theme.palette.mode === 'dark' 
-          ? 'rgba(15, 23, 42, 0.9)'
-          : 'rgba(255, 255, 255, 0.9)',
-        backdropFilter: 'blur(10px)',
-        borderTop: '1px solid',
-        borderColor: theme.palette.mode === 'dark'
-          ? 'rgba(99, 102, 241, 0.2)'
-          : 'rgba(79, 70, 229, 0.2)',
-        pt: 6,
-        pb: 4,
+        mt: 8,
+        pb: 3,
       }}
     >
       <Container maxWidth="lg">
-        <Grid container spacing={4}>
-          {/* Quick Links */}
-          <Grid item xs={12} sm={6} md={4}>
-            <Typography
-              variant="h6"
-              sx={{
-                mb: 2,
-                fontFamily: '"Share Tech Mono", monospace',
-                color: theme.palette.mode === 'dark'
-                  ? theme.palette.primary.light
-                  : theme.palette.primary.main,
-              }}
-            >
-              Quick Links
-            </Typography>
-            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
-              {quickLinks.map((link) => (
-                <Box
-                  key={link.name}
-                  component={motion.div}
-                  whileHover={{ x: 5 }}
-                  onClick={() => handleNavigation(link.href)}
-                  sx={{
-                    cursor: 'pointer',
-                    color: theme.palette.mode === 'dark' ? '#94a3b8' : '#475569',
-                    '&:hover': {
-                      color: theme.palette.primary.main,
-                    },
-                  }}
-                >
-                  {link.name}
-                </Box>
-              ))}
-            </Box>
-          </Grid>
-
-          {/* Contact Info */}
-          <Grid item xs={12} sm={6} md={4}>
-            <Typography
-              variant="h6"
-              sx={{
-                mb: 2,
-                fontFamily: '"Share Tech Mono", monospace',
-                color: theme.palette.mode === 'dark'
-                  ? theme.palette.primary.light
-                  : theme.palette.primary.main,
-              }}
-            >
-              Contact Us
-            </Typography>
-            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
-              <Box
-                component={motion.div}
-                whileHover={{ x: 5 }}
-                onClick={() => handleNavigation('/contact')}
-                sx={{ 
-                  display: 'flex', 
-                  alignItems: 'center', 
-                  gap: 1,
-                  cursor: 'pointer',
-                  color: theme.palette.mode === 'dark' ? '#94a3b8' : '#475569',
-                  '&:hover': {
-                    color: theme.palette.primary.main,
-                  },
-                }}
-              >
-                <Email fontSize="small" color="primary" />
-                <span>support@macromail.com</span>
-              </Box>
-              <Box
-                component={motion.div}
-                whileHover={{ x: 5 }}
-                onClick={() => handleNavigation('/contact')}
-                sx={{ 
-                  display: 'flex', 
-                  alignItems: 'center', 
-                  gap: 1,
-                  cursor: 'pointer',
-                  color: theme.palette.mode === 'dark' ? '#94a3b8' : '#475569',
-                  '&:hover': {
-                    color: theme.palette.primary.main,
-                  },
-                }}
-              >
-                <Phone fontSize="small" color="primary" />
-                <span>+977 9826762023</span>
-              </Box>
-            </Box>
-          </Grid>
-
-          {/* Social Links */}
+        <Grid container spacing={3}>
           <Grid item xs={12} md={4}>
             <Typography
               variant="h6"
               sx={{
-                mb: 2,
                 fontFamily: '"Share Tech Mono", monospace',
-                color: theme.palette.mode === 'dark'
-                  ? theme.palette.primary.light
-                  : theme.palette.primary.main,
+                color: theme.palette.mode === 'dark' ? theme.palette.primary.light : theme.palette.primary.main,
+                mb: 2,
+              }}
+            >
+              Quick Links
+            </Typography>
+            <Grid container spacing={2}>
+              {quickLinks.map((link) => (
+                <Grid item xs={6} key={link.name}>
+                  <Typography
+                    onClick={() => handleNavigation(link.href)}
+                    sx={{
+                      cursor: 'pointer',
+                      '&:hover': {
+                        color: theme.palette.primary.main,
+                      },
+                    }}
+                  >
+                    {link.name}
+                  </Typography>
+                </Grid>
+              ))}
+            </Grid>
+          </Grid>
+
+          <Grid item xs={12} md={4}>
+            <Typography
+              variant="h6"
+              sx={{
+                fontFamily: '"Share Tech Mono", monospace',
+                color: theme.palette.mode === 'dark' ? theme.palette.primary.light : theme.palette.primary.main,
+                mb: 2,
               }}
             >
               Connect With Us
             </Typography>
-            <Box sx={{ display: 'flex', gap: 2 }}>
+            <Box sx={{ display: 'flex', gap: 1 }}>
               {socialLinks.map((social) => (
                 <MotionIconButton
                   key={social.label}
                   onClick={() => handleNavigation(social.href)}
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
                   sx={{
-                    color: theme.palette.primary.main,
-                    background: theme.palette.mode === 'dark'
-                      ? 'rgba(99, 102, 241, 0.1)'
-                      : 'rgba(79, 70, 229, 0.1)',
-                    '&:hover': {
-                      background: theme.palette.mode === 'dark'
-                        ? 'rgba(99, 102, 241, 0.2)'
-                        : 'rgba(79, 70, 229, 0.2)',
-                    },
+                    color: theme.palette.mode === 'dark' ? theme.palette.primary.light : theme.palette.primary.main,
                   }}
                 >
                   <social.icon />
@@ -181,32 +104,22 @@ export default function Footer() {
               ))}
             </Box>
           </Grid>
+
+          <Grid item xs={12} md={4}>
+            <VisitorForm />
+          </Grid>
         </Grid>
 
-        {/* Copyright */}
-        <Box
+        <Typography
+          variant="body2"
+          align="center"
           sx={{
-            mt: 6,
-            pt: 3,
-            borderTop: '1px solid',
-            borderColor: theme.palette.mode === 'dark'
-              ? 'rgba(99, 102, 241, 0.2)'
-              : 'rgba(79, 70, 229, 0.2)',
-            textAlign: 'center',
+            mt: 4,
+            opacity: 0.7,
           }}
         >
-          <Typography
-            variant="body2"
-            sx={{
-              color: 'text.secondary',
-              '& span': {
-                color: theme.palette.error.main,
-              },
-            }}
-          >
-            Made with <span>❤️</span> by MacroMail &copy; {new Date().getFullYear()}
-          </Typography>
-        </Box>
+          {new Date().getFullYear()} MacroMail. All rights reserved.
+        </Typography>
       </Container>
     </Box>
   );

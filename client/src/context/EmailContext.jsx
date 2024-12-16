@@ -26,16 +26,11 @@ export const EmailProvider = ({ children }) => {
       if (!currentEmail) return;
       
       try {
-        setLoading(true);
         const { emails: newEmails } = await emailService.getEmails(currentEmail);
         setEmails(newEmails);
-        setError(null);
       } catch (error) {
         console.error('Error fetching emails:', error);
-        setError('Failed to fetch emails. Please try again later.');
-        toast.error('Failed to fetch emails');
-      } finally {
-        setLoading(false);
+        setError('Failed to fetch emails');
       }
     };
 
